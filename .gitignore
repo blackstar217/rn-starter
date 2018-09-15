@@ -5,6 +5,10 @@
 # Xcode
 #
 build/
+ios/Bolts.framework
+ios/FBSDKCoreKit.framework
+ios/FBSDKLoginKit.framework
+ios/FBSDKShareKit.framework
 *.pbxuser
 !default.pbxuser
 *.mode1v3
