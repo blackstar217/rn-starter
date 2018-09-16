@@ -21,7 +21,7 @@ class LoginScreen extends React.Component {
   }
 
   onLogin = () => {
-    alert(JSON.stringify(this.state));
+    this.props.navigation.navigate('lottieScreen');
   }
 
   onLoginWithFB = () => {
