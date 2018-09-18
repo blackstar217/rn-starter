@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
 import { LoginManager, AccessToken } from 'react-native-fbsdk';
+import { GoogleSignin, statusCodes } from 'react-native-google-signin';
 import TextInputComponent from '../../components/textInputComponent';
 import ButtonComponent from '../../components/buttonComponent';
 
@@ -44,6 +45,27 @@ class LoginScreen extends React.Component {
     )
   }
 
+  onLoginWithGoogle = async () => {
+    GoogleSignin.configure({
+      iosClientId: '511814273139-21retrsji8gsrb3q347t7ceosokap7ea.apps.googleusercontent.com'
+    });
+    try {
+      await GoogleSignin.hasPlayServices();
+      const userInfo = await GoogleSignin.signIn();
+      alert(JSON.stringify(userInfo));
+    } catch (error) {
+      if (error.code === statusCodes.SIGN_IN_CANCELLED) {
+        alert('Cancelled');
+      } else if (error.code === statusCodes.IN_PROGRESS) {
+        alert('Inprogress');
+      } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+        alert('Play Services not available');
+      } else {
+        alert(error);
+      }
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -64,6 +86,10 @@ class LoginScreen extends React.Component {
         <ButtonComponent
           label="Facebook Login"
           onPress={this.onLoginWithFB}
+        />
+        <ButtonComponent
+          label="Google Login"
+          onPress={this.onLoginWithGoogle}
         />
       </View>
     )
