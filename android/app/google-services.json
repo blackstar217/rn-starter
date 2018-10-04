@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "511814273139",
+    "firebase_url": "https://starterkit-b6743.firebaseio.com",
+    "project_id": "starterkit-b6743",
+    "storage_bucket": "starterkit-b6743.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511814273139:android:6a560fa4a1c1b356",
+        "android_client_info": {
+          "package_name": "com.starterkit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511814273139-ce17bb1jrs6ca0orfbi06dl8msk1s7nj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6bl0HSNClB7BtXTUGEN--G-KH6khCLu4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
