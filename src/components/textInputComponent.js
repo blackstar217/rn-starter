@@ -8,6 +8,7 @@ const TextInputComponent = ({ placeholder, onChangeText }) => {
     <TextInput
       style={styles.inputStyle}
       placeholder={placeholder}
+      underlineColorAndroid='transparent'
       onChangeText={value => onChangeText(value)}
     />
   )

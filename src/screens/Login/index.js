@@ -61,7 +61,7 @@ class LoginScreen extends React.Component {
       } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
         alert('Play Services not available');
       } else {
-        alert(error);
+        alert("error: ", error);
       }
     }
   }
@@ -79,18 +79,26 @@ class LoginScreen extends React.Component {
             onChangeText={this.onChangePassword}
           />
         </View>
-        <ButtonComponent
-          label="Login"
-          onPress={this.onLogin}
-        />
-        <ButtonComponent
-          label="Facebook Login"
-          onPress={this.onLoginWithFB}
-        />
-        <ButtonComponent
-          label="Google Login"
-          onPress={this.onLoginWithGoogle}
-        />
+        <View style={styles.buttonStyle}>
+          <ButtonComponent
+            label="Login"
+            onPress={this.onLogin}
+            style={styles.buttonStyle}
+          />
+        </View>
+        <View style={styles.buttonStyle}>
+          <ButtonComponent
+            label="Facebook Login"
+            onPress={this.onLoginWithFB}
+          />
+        </View>
+        <View style={styles.buttonStyle}>
+          <ButtonComponent
+            label="Google Login"
+            onPress={this.onLoginWithGoogle}
+            style={styles.buttonStyle}
+          />
+        </View>
       </View>
     )
   }
@@ -110,6 +118,9 @@ const styles = StyleSheet.create({
     borderColor: '#333',
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  buttonStyle: {
+    marginTop: 10,
   }
 })
 

@@ -5,9 +5,9 @@ class LottieScreen extends React.Component {
   render() {
     return (
       <LottieView
-        source={require('../../assets/animations/LottieLogo2.json')}
+        source={require('../../assets/animations/LottieLogo1.json')}
         autoPlay
-        loop
+        loop={false}
       />
     );
   }
